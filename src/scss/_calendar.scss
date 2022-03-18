@@ -1,12 +1,4 @@
-
-$color-black: rgb(58, 58, 58);
-$color-grey: rgb(205, 205, 205);
-$color-white: rgb(240, 240, 240);
-$color-red: rgb(206, 36, 36);
-$color-blue: rgb(30, 159, 245);
-$font-family: 'Montserrat', sans-serif;;
-$font-size: 16px;
-
+@import './constants';
 
 .calendar {
   box-sizing: border-box;
@@ -84,6 +76,10 @@ $font-size: 16px;
   width: 2rem;
   height: 2rem;
   font-weight: 500;
+
+  &:hover{
+    background-color: $color-grey;
+  } 
 }
 
 .arrowgrp {

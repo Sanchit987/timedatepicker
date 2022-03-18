@@ -1,12 +1,9 @@
 import './App.scss';
-import React, { useState } from 'react';
-import CalendarIndex from './components/calendar/calendarindex';
-import moment from 'moment';
-
+import React from 'react';
+import DateTimePicker from './components/datetimepicker/datetimeindex';
 const App = () => {
-	const [value, setValue] = useState(moment());
 	return (
-		<CalendarIndex value={value} onChange={setValue} />
+		<DateTimePicker />
 	);
 };
 
