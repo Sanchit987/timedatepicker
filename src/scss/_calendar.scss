@@ -1,0 +1,92 @@
+
+$color-black: rgb(58, 58, 58);
+$color-grey: rgb(205, 205, 205);
+$color-white: rgb(240, 240, 240);
+$color-red: rgb(206, 36, 36);
+$color-blue: rgb(30, 159, 245);
+$font-family: 'Montserrat', sans-serif;;
+$font-size: 16px;
+
+
+.calendar {
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 400px;
+  border: 1px solid black;
+  
+  .header {
+    text-align: center;
+    min-height: 2rem;
+    line-height: 2rem;
+    font-family: $font-family;
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .day-names {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .week {
+    background-color: white;
+    width: calc(100% / 7);
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration:underline;
+    text-decoration-style: dotted;
+    font-weight: 400;
+  }
+  .day {
+    position: relative;
+    width: calc(100% / 7);
+    height: 44px;
+    display: inline-block;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 1;
+    text-align: center;
+
+    .selected {
+      background-color: $color-blue;
+      color: $color-white;
+      font-weight: bold;
+    }
+    div {
+      width: 54px;
+      height: 44px;
+      position: relative;
+      color: var(--black);
+      z-index: 100;
+      line-height: 44px;
+    }
+    .weekend {
+      color: $color-red;
+    }
+
+    div.before, div.after {
+      color: $color-grey;
+    }
+  }
+}
+
+.icons {
+  width: 2rem;
+  height: 2rem;
+  font-weight: 500;
+}
+
+.arrowgrp {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,13 @@
+.App {
+  background-color: #555555;
+  font-weight: 700;
+}
+
+.App p {
+  color: #999999;
+}
+
+.App:hover {
+  background-color: pink;
+}
+/*# sourceMappingURL=App.css.map */
