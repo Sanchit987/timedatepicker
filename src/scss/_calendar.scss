@@ -86,3 +86,23 @@
   display: flex;
   flex-direction: row;
 }
+
+.grid-3x4 {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(3,33%);
+  text-align: center;
+  padding: 3px;
+
+  .item {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .selected {
+    background-color: $color-blue;
+  }
+}
