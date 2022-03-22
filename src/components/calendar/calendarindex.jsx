@@ -35,6 +35,10 @@ export default function CalendarIndex({ value, onChange, clicked, moClick }) {
 		return value.clone().add(1, "year");
 	}
 
+	function setDay(e) {
+		onChange(value.clone().set("date", e.target.innerHTML));
+	}
+
 	return (<div>
 		<div className="calendar">
 			<div className="header">
@@ -57,7 +61,7 @@ export default function CalendarIndex({ value, onChange, clicked, moClick }) {
 					<div key={week}>
 						{
 							week.map((day) => (
-								<div className="day" onClick={() => onChange(day)} key={day} >
+								<div className="day" onClick={setDay} key={day} >
 									<div className={dayStyles(day, value)}>{day.format("D")}</div>
 								</div>
 							))

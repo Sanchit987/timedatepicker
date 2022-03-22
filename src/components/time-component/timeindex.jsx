@@ -21,7 +21,7 @@ const TimeIndex = ({ value, onChange }) => {
 
 
   return (<div className="time-selector">
-    <div className="header">{currMoment.format("HH:mm").toString()}</div>
+    <div className="header time-head">{currMoment.format("HH:mm").toString()}</div>
 
     <div className="time_updater">
       <div className="time-ch">
