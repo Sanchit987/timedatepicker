@@ -106,3 +106,22 @@
     background-color: $color-blue;
   }
 }
+
+
+.text-box {
+  max-width: 400px;
+  box-sizing: border-box;
+  padding: 3px;
+  border: 1px solid $color-grey;
+  border-radius: 20px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    margin: 4px;
+    font-size: 1.5rem;
+  }
+}
