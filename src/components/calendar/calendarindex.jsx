@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import buildCalendar from "./builcal";
 import dayStyles from "./daystyles";
 import { AngleLeft, AngleRight, ControlBackward, ControlForward } from "../../assets/imagesFinal";
-export default function CalendarIndex({ value, onChange, clicked }) {
+export default function CalendarIndex({ value, onChange, clicked, moClick }) {
 
 	const [calendar, setCalendar] = useState([]);
 
@@ -42,7 +42,7 @@ export default function CalendarIndex({ value, onChange, clicked }) {
 					<div className="icons" onClick={() => onChange(prevYear())}><ControlBackward /></div>
 					<div className="icons" onClick={() => onChange(prevMonth())}><AngleLeft /></div>
 				</div>
-				<div onClick={clicked}>{currMonthName()} {currYear()}</div>
+				<div><span onClick={moClick}>{currMonthName()}</span> <span onClick={clicked}>{currYear()}</span></div>
 				<div className="arrowgrp">
 					<div className="icons" onClick={() => onChange(nextMonth())}><AngleRight /></div>
 					<div className="icons" onClick={() => onChange(nextYear())}><ControlForward /></div>
